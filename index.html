@@ -14,7 +14,13 @@
 <meta property="og:site_name" content="Elias Rodrigues">
 <meta property="og:title" content="Elias Rodrigues — Engenheiro de Software, Backend">
 <meta property="og:description" content="Java, Spring Boot, Node.js, TypeScript e PostgreSQL. APIs e sistemas em produção, um SaaS próprio no ar. Disponível para início imediato, remoto.">
-<meta name="twitter:card" content="summary">
+<!-- og:image precisa de URL absoluta: raspador de rede social não resolve caminho relativo -->
+<meta property="og:image" content="https://elias-costa.github.io/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Elias Rodrigues — Engenheiro de Software, Backend. Java, Spring Boot, Node.js, TypeScript e PostgreSQL.">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Elias Rodrigues — Engenheiro de Software, Backend">
 <meta name="twitter:description" content="Java, Spring Boot, Node.js, TypeScript e PostgreSQL. APIs e sistemas em produção, um SaaS próprio no ar.">
 
@@ -203,6 +209,26 @@
     <div class="wrap reveal">
       <div class="kicker">Portfólio</div>
       <h2>Outros projetos</h2>
+
+      <div class="card card-wide">
+        <div class="card-top">
+          <h3>Caixa Simples — PDV multi-tenant em Java e Spring</h3>
+          <span class="badge badge-neutral">em desenvolvimento</span>
+        </div>
+        <div class="tags">
+          <span class="tag">Java 21</span><span class="tag">Spring Boot 4</span><span class="tag">Spring Modulith</span>
+          <span class="tag">Spring Security</span><span class="tag">PostgreSQL</span><span class="tag">Flyway</span><span class="tag">Testcontainers</span>
+        </div>
+        <div class="card-wide-body">
+          <p>Sistema de caixa e ponto de venda para pequenos negócios, construído como monolito modular. Produto próprio, em desenvolvimento; o repositório é público para leitura do código, com os direitos reservados. É onde aplico a mesma disciplina do SiteHealth ao Java e ao Spring: a fronteira entre módulos é verificada por teste, todo dado persistido tem teste de isolamento entre contas, e a regra de negócio vive em classes sem Spring nem JPA.</p>
+          <ul class="card-points">
+            <li><strong>Isolamento entre contas que falha fechado.</strong> O filtro por conta é do Hibernate, não de cada consulta; sem tenant no contexto, a leitura vem vazia e a escrita quebra na chave estrangeira. Cada tabela tem um teste que grava na conta A e prova que a B não enxerga.</li>
+            <li><strong>Arquitetura como teste.</strong> O Spring Modulith verifica as fronteiras dos oito módulos: importar o <code>internal</code> de outro módulo quebra o build, em vez de depender de disciplina.</li>
+            <li><strong>Dinheiro sem arredondamento escondido.</strong> O <code>Money</code> recusa fração de centavo no construtor; o único método que arredonda se chama <code>arredondando</code>, para a decisão aparecer na linha que a toma.</li>
+          </ul>
+        </div>
+        <a href="https://github.com/Elias-Costa/caixa-simples" class="card-link" target="_blank" rel="noopener">código no GitHub →</a>
+      </div>
 
       <div class="cards">
         <div class="card">

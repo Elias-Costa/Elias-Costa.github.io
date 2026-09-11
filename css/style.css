@@ -176,7 +176,7 @@ section h2{font-size:26px;margin-bottom:28px;}
   font-family:var(--font-body);font-weight:600;font-size:15px;margin-bottom:6px;
 }
 .decision p{color:var(--ink-muted);font-size:14.5px;max-width:66ch;}
-.decision code{
+.decision code,.card-points code{
   font-family:var(--font-mono);font-size:12.5px;
   background:var(--surface);border:1px solid var(--line);
   padding:1px 5px;border-radius:4px;color:var(--ink);
@@ -230,6 +230,20 @@ a.case-link{
 a.case-link:hover{color:var(--accent-ink);}
 .case-foot .note{font-family:var(--font-mono);font-size:12.5px;color:var(--ink-faint);}
 
+/* card de largura inteira acima do grid: o projeto em Java pesa mais que os
+   dois abaixo para uma vaga de backend, e a hierarquia visual precisa dizer isso */
+.card-wide{margin-bottom:22px;}
+.card-wide-body{display:grid;grid-template-columns:1fr 1.3fr;gap:28px;align-items:start;}
+.card-points{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;}
+.card-points li{color:var(--ink-muted);font-size:14px;line-height:1.55;padding-left:14px;position:relative;}
+.card-points li::before{
+  content:"";position:absolute;left:0;top:9px;
+  width:5px;height:5px;border-radius:50%;background:var(--accent);
+}
+.card-points strong{color:var(--ink);font-weight:600;}
+/* dentro do card o fundo ja e --surface; o chip precisa do papel para aparecer */
+.card-points code{background:var(--paper);}
+
 /* ---- Skills ---- */
 .skill-group{margin-bottom:18px;}
 .skill-group h4{
@@ -252,6 +266,9 @@ footer p{font-size:13px;color:var(--ink-faint);}
 @media (max-width:720px){
   .sobre-grid{grid-template-columns:1fr;gap:28px;}
   .cards{grid-template-columns:1fr;}
+  .card-wide-body{grid-template-columns:1fr;gap:16px;}
+  /* só aqui: no desktop o flex-wrap faria o badge descer em vez de o título encolher */
+  .card-top{flex-wrap:wrap;}
   .job{grid-template-columns:1fr;gap:10px;}
   .nav-links{gap:16px;}
   .hero{padding:56px 0 44px;}
