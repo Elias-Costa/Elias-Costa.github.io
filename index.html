@@ -24,6 +24,98 @@
 <meta name="twitter:title" content="Elias Rodrigues — Engenheiro de Software, Backend">
 <meta name="twitter:description" content="Java, Spring Boot, Node.js, TypeScript e PostgreSQL. APIs e sistemas em produção, um SaaS próprio no ar.">
 
+<!-- JSON-LD: dados estruturados para o Google ligar nome, cargo, formação e perfis
+     (LinkedIn, GitHub) a este site na busca pelo nome. O nome de registro é o
+     completo e as formas usadas em cada perfil vão em alternateName, para uma
+     busca por "Elias Costa" ou "Elias Rodrigues" chegar na mesma pessoa -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://elias-costa.github.io/#person",
+      "name": "Elias da Costa Rodrigues",
+      "alternateName": ["Elias Rodrigues", "Elias Costa", "Elias C. Rodrigues"],
+      "givenName": "Elias",
+      "familyName": "da Costa Rodrigues",
+      "url": "https://elias-costa.github.io/",
+      "image": "https://elias-costa.github.io/og-image.png",
+      "email": "mailto:ecrprofessional@gmail.com",
+      "jobTitle": "Engenheiro de Software Backend",
+      "description": "Engenheiro de software backend. Java, Spring Boot, Node.js, TypeScript e PostgreSQL. Bacharel em Ciência da Computação pela UFS, mantém o SiteHealth, um SaaS de monitoramento de sites em produção. Disponível para início imediato em posições remotas.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Aracaju",
+        "addressRegion": "SE",
+        "addressCountry": "BR"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidade Federal de Sergipe",
+        "alternateName": "UFS",
+        "url": "https://www.ufs.br/"
+      },
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "AWS Academy — Cloud Foundations",
+        "credentialCategory": "certificate"
+      },
+      "knowsAbout": [
+        "Java", "Spring Boot", "Node.js", "TypeScript", "PostgreSQL", "Python", "FastAPI",
+        "APIs REST", "Row Level Security", "RBAC", "Docker", "AWS", "PyTorch", "Machine Learning"
+      ],
+      "knowsLanguage": ["pt-BR", "en"],
+      "sameAs": [
+        "https://www.linkedin.com/in/elias-rodrigues-288450254/",
+        "https://github.com/Elias-Costa"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://elias-costa.github.io/#website",
+      "url": "https://elias-costa.github.io/",
+      "name": "Elias Rodrigues",
+      "inLanguage": "pt-BR",
+      "about": { "@id": "https://elias-costa.github.io/#person" },
+      "author": { "@id": "https://elias-costa.github.io/#person" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://site-health-ten.vercel.app/#app",
+      "name": "SiteHealth",
+      "url": "https://site-health-ten.vercel.app",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Web",
+      "description": "SaaS de monitoramento técnico de sites: crawl periódico e relatório por e-mail dos problemas que afetam SEO e experiência do usuário — links e imagens quebrados, conteúdo misto, bloqueio de indexação, certificado e domínio a vencer.",
+      "author": { "@id": "https://elias-costa.github.io/#person" }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5753/erbase.2025.13757",
+      "headline": "Mapas Auto-Organizáveis e Autoencoders",
+      "url": "https://doi.org/10.5753/erbase.2025.13757",
+      "sameAs": "https://doi.org/10.5753/erbase.2025.13757",
+      "datePublished": "2025",
+      "inLanguage": "pt-BR",
+      "author": [
+        { "@id": "https://elias-costa.github.io/#person" },
+        { "@type": "Person", "name": "Leonardo N. Matos" }
+      ],
+      "isPartOf": {
+        "@type": "PublicationVolume",
+        "name": "Anais da ERBASE 2025 — Escola Regional de Computação Bahia, Alagoas e Sergipe"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sociedade Brasileira de Computação",
+        "alternateName": "SBC"
+      }
+    }
+  ]
+}
+</script>
+
 <!-- arquivo, não data URI, e com width/height no SVG: sem dimensões intrínsecas
      o Chrome recusa o ícone e volta a pedir /favicon.ico, que responde 404 -->
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
