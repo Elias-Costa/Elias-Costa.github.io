@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elias Rodrigues — Engenheiro de Software, Backend</title>
-<meta name="description" content="Elias Rodrigues, engenheiro de software backend. Java, Spring Boot, Node.js, TypeScript e PostgreSQL. Sistemas em produção. Disponível para início imediato em posições remotas.">
+<title>Elias Rodrigues — Engenheiro de Software, Full Stack</title>
+<meta name="description" content="Elias Rodrigues, engenheiro de software full stack. Java, Spring Boot, TypeScript, Node.js, React e PostgreSQL. Produtos completos em produção, do banco à tela. Disponível para início imediato em posições remotas.">
 <link rel="canonical" href="https://elias-costa.github.io/">
 
 <!-- Open Graph / Twitter: controla o preview quando o link é compartilhado (LinkedIn, WhatsApp) -->
@@ -12,17 +12,17 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:url" content="https://elias-costa.github.io/">
 <meta property="og:site_name" content="Elias Rodrigues">
-<meta property="og:title" content="Elias Rodrigues — Engenheiro de Software, Backend">
-<meta property="og:description" content="Java, Spring Boot, Node.js, TypeScript e PostgreSQL. APIs e sistemas em produção, um SaaS próprio no ar. Disponível para início imediato, remoto.">
+<meta property="og:title" content="Elias Rodrigues — Engenheiro de Software, Full Stack">
+<meta property="og:description" content="Java, Spring Boot, TypeScript, Node.js, React e PostgreSQL. Produtos completos em produção, do banco à tela — um SaaS e um PWA offline-first próprios. Disponível para início imediato, remoto.">
 <!-- og:image precisa de URL absoluta: raspador de rede social não resolve caminho relativo -->
 <meta property="og:image" content="https://elias-costa.github.io/og-image.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Elias Rodrigues — Engenheiro de Software, Backend. Java, Spring Boot, Node.js, TypeScript e PostgreSQL.">
+<meta property="og:image:alt" content="Elias Rodrigues — Engenheiro de Software, Full Stack. Java, Spring Boot, TypeScript, Node.js, React e PostgreSQL.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Elias Rodrigues — Engenheiro de Software, Backend">
-<meta name="twitter:description" content="Java, Spring Boot, Node.js, TypeScript e PostgreSQL. APIs e sistemas em produção, um SaaS próprio no ar.">
+<meta name="twitter:title" content="Elias Rodrigues — Engenheiro de Software, Full Stack">
+<meta name="twitter:description" content="Java, Spring Boot, TypeScript, Node.js, React e PostgreSQL. Produtos completos em produção, do banco à tela — um SaaS e um PWA offline-first próprios.">
 
 <!-- JSON-LD: dados estruturados para o Google ligar nome, cargo, formação e perfis
      (LinkedIn, GitHub) a este site na busca pelo nome. O nome de registro é o
@@ -42,8 +42,8 @@
       "url": "https://elias-costa.github.io/",
       "image": "https://elias-costa.github.io/og-image.png",
       "email": "mailto:ecrprofessional@gmail.com",
-      "jobTitle": "Engenheiro de Software Backend",
-      "description": "Engenheiro de software backend. Java, Spring Boot, Node.js, TypeScript e PostgreSQL. Bacharel em Ciência da Computação pela UFS, mantém o SiteHealth, um SaaS de monitoramento de sites em produção. Disponível para início imediato em posições remotas.",
+      "jobTitle": "Engenheiro de Software Full Stack",
+      "description": "Engenheiro de software full stack. Java, Spring Boot, TypeScript, Node.js, React e PostgreSQL. Bacharel em Ciência da Computação pela UFS, mantém produtos próprios em produção: o SiteHealth, SaaS de monitoramento de sites, e o Fichinhas, PWA offline-first de controle de fiado. Disponível para início imediato em posições remotas.",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Aracaju",
@@ -62,8 +62,9 @@
         "credentialCategory": "certificate"
       },
       "knowsAbout": [
-        "Java", "Spring Boot", "Node.js", "TypeScript", "PostgreSQL", "Python", "FastAPI",
-        "APIs REST", "Row Level Security", "RBAC", "Docker", "AWS", "PyTorch", "Machine Learning"
+        "Java", "Spring Boot", "Node.js", "TypeScript", "React", "Next.js", "PostgreSQL",
+        "Apache Kafka", "Python", "FastAPI", "APIs REST", "Progressive Web Apps", "Offline-first",
+        "Row Level Security", "RBAC", "Microsserviços", "Docker", "AWS", "PyTorch", "Machine Learning"
       ],
       "knowsLanguage": ["pt-BR", "en"],
       "sameAs": [
@@ -88,6 +89,37 @@
       "applicationCategory": "WebApplication",
       "operatingSystem": "Web",
       "description": "SaaS de monitoramento técnico de sites: crawl periódico e relatório por e-mail dos problemas que afetam SEO e experiência do usuário — links e imagens quebrados, conteúdo misto, bloqueio de indexação, certificado e domínio a vencer.",
+      "author": { "@id": "https://elias-costa.github.io/#person" }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://github.com/Elias-Costa/controle-estoque-gastos#code",
+      "name": "Fichinhas — controle de fiado offline-first",
+      "codeRepository": "https://github.com/Elias-Costa/controle-estoque-gastos",
+      "programmingLanguage": "TypeScript",
+      "runtimePlatform": "Progressive Web App",
+      "license": "https://opensource.org/licenses/MIT",
+      "description": "PWA offline-first que substitui o caderno de fiado de quem revende cosméticos por conta própria. React, Tailwind, Dexie (IndexedDB) e Supabase; toda escrita nasce no aparelho e sobe por fila idempotente; dinheiro em bigint de centavos; invariantes e isolamento por conta valendo no próprio Postgres.",
+      "author": { "@id": "https://elias-costa.github.io/#person" }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://github.com/Elias-Costa/invoice-microservices#code",
+      "name": "invoice-microservices — emissão de notas fiscais em microsserviços",
+      "codeRepository": "https://github.com/Elias-Costa/invoice-microservices",
+      "programmingLanguage": "Java",
+      "runtimePlatform": "Spring Boot 4",
+      "description": "Emissão de notas fiscais em microsserviços: um banco por serviço, Apache Kafka, Saga coordenada por outbox transacional, idempotência HTTP por Idempotency-Key e guarda contra evento reprocessado, provados contra Postgres e Kafka reais via Testcontainers.",
+      "author": { "@id": "https://elias-costa.github.io/#person" }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://github.com/Elias-Costa/caixa-simples#code",
+      "name": "Caixa Simples — PDV multi-tenant",
+      "codeRepository": "https://github.com/Elias-Costa/caixa-simples",
+      "programmingLanguage": "Java",
+      "runtimePlatform": "Spring Boot 4",
+      "description": "Sistema de caixa e ponto de venda para pequenos negócios, construído como monolito modular com Spring Modulith e PostgreSQL.",
       "author": { "@id": "https://elias-costa.github.io/#person" }
     },
     {
@@ -134,6 +166,7 @@
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#experiencia">Experiência</a></li>
       <li><a href="#sitehealth">SiteHealth</a></li>
+      <li><a href="#fichinhas">Fichinhas</a></li>
       <li><a href="#projetos">Projetos</a></li>
       <li><a href="#stack">Stack</a></li>
       <li><a href="#contato">Contato</a></li>
@@ -146,17 +179,17 @@
 
   <section class="hero">
     <div class="wrap">
-      <div class="eyebrow">Engenheiro de Software · Backend</div>
+      <div class="eyebrow">Engenheiro de Software · Full Stack</div>
       <h1>Elias Rodrigues</h1>
-      <p class="role">Java · Spring Boot · Node.js · TypeScript · PostgreSQL</p>
+      <p class="role">Java · Spring Boot · TypeScript · Node.js · React · PostgreSQL</p>
 
-      <div class="signature">SaaS próprio em produção desde jul/2026 <span class="muted">—</span> arquitetura, segurança e operação minhas</div>
-      <p class="sig-caption">SiteHealth · monitoramento técnico de sites</p>
+      <div class="signature">Dois produtos próprios em produção, do banco à tela <span class="muted">—</span> arquitetura e operação minhas</div>
+      <p class="sig-caption">SiteHealth · SaaS de monitoramento de sites &nbsp;·&nbsp; Fichinhas · PWA offline-first de controle de fiado</p>
 
-      <p class="lead">Bacharel em Ciência da Computação pela UFS. Construo APIs e sistemas que rodam em produção — regras de negócio, controle de acesso por papéis, consistência transacional e performance. Disponível para início imediato em posições remotas.</p>
+      <p class="lead">Bacharel em Ciência da Computação pela UFS. Construo produtos completos que rodam em produção — da modelagem do banco e das regras de negócio à interface que o usuário toca. Minha base é backend: controle de acesso por papéis, consistência transacional, performance. Disponível para início imediato em posições remotas.</p>
 
       <div class="cta-row">
-        <a href="#sitehealth" class="btn btn-solid">Ver o projeto em destaque</a>
+        <a href="#sitehealth" class="btn btn-solid">Ver os projetos em destaque</a>
         <a href="#contato" class="btn btn-outline">Contato</a>
       </div>
     </div>
@@ -168,9 +201,9 @@
       <h2>Quem eu sou</h2>
       <div class="sobre-grid">
         <div>
-          <p>Sou bacharel em Ciência da Computação pela Universidade Federal de Sergipe — concluí a grade curricular em julho de 2026 e colo grau em agosto. Meu foco é backend: construí APIs e sistemas em produção com Java, Node.js e Python, com atenção a consistência de dados, controle de acesso e performance.</p>
+          <p>Sou bacharel em Ciência da Computação pela Universidade Federal de Sergipe — colei grau em agosto de 2026. Minha base é backend: construí APIs e sistemas em produção com Java, Node.js e Python, com atenção a consistência de dados, controle de acesso e performance. O frontend veio pelos produtos próprios — Next.js e React no SiteHealth, React e PWA no Fichinhas — e hoje faz parte do que entrego de ponta a ponta.</p>
           <p>Antes disso, passei dois anos como pesquisador de Iniciação Científica (PIBIC) em Machine Learning — implementei e treinei modelos com PyTorch, construí pipelines de dados e sou coautor de artigo publicado na ERBASE 2025. Foi ali que aprendi a medir antes de concluir, hábito que carreguei para o desenvolvimento.</p>
-          <p>Hoje mantenho o SiteHealth, um SaaS que monitora sites e está no ar. É onde tomo as decisões de arquitetura, segurança e operação de ponta a ponta — e onde os erros são meus para descobrir e corrigir.</p>
+          <p>Hoje mantenho dois produtos próprios em produção: o SiteHealth, um SaaS que monitora sites, e o Fichinhas, um PWA offline-first que substituiu o caderno de fiado de uma revendedora. São onde tomo as decisões de produto, arquitetura, segurança, interface e operação de ponta a ponta — e onde os erros são meus para descobrir e corrigir.</p>
         </div>
         <ul class="facts">
           <li><span>Localização</span><span>Aracaju, SE — Brasil</span></li>
@@ -229,7 +262,7 @@
 
   <section id="sitehealth">
     <div class="wrap reveal">
-      <div class="kicker">Projeto em destaque</div>
+      <div class="kicker">Projeto em destaque · SaaS</div>
       <h2>SiteHealth</h2>
 
       <div class="case-head">
@@ -237,12 +270,13 @@
         <span class="badge badge-live">no ar · pré-lançamento</span>
       </div>
 
-      <p class="case-intro">Faz crawl periódico dos sites cadastrados e envia por e-mail um relatório priorizado dos problemas que afetam SEO e experiência do usuário: links e imagens quebrados, conteúdo misto, bloqueio acidental de indexação, certificado e domínio prestes a vencer. É <strong>produto próprio</strong> — eu decido produto, arquitetura, segurança e operação, e é o projeto onde consigo mostrar decisão técnica com evidência, não só código.</p>
+      <p class="case-intro">Faz crawl periódico dos sites cadastrados e envia por e-mail um relatório priorizado dos problemas que afetam SEO e experiência do usuário: links e imagens quebrados, conteúdo misto, bloqueio acidental de indexação, certificado e domínio prestes a vencer. É <strong>produto próprio</strong> — eu decido produto, arquitetura, segurança, interface e operação, e é o projeto onde consigo mostrar decisão técnica com evidência, não só código.</p>
 
       <div class="tags">
-        <span class="tag">Next.js (App Router)</span><span class="tag">TypeScript</span><span class="tag">PostgreSQL</span>
-        <span class="tag">Supabase + RLS</span><span class="tag">Inngest</span><span class="tag">Stripe</span>
-        <span class="tag">Resend</span><span class="tag">Sentry</span><span class="tag">Vercel</span>
+        <span class="tag">Next.js (App Router)</span><span class="tag">React</span><span class="tag">TypeScript</span>
+        <span class="tag">Tailwind CSS</span><span class="tag">PostgreSQL</span><span class="tag">Supabase + RLS</span>
+        <span class="tag">Inngest</span><span class="tag">Stripe</span><span class="tag">Resend</span>
+        <span class="tag">Sentry</span><span class="tag">Vercel</span>
       </div>
 
       <div class="metrics">
@@ -297,10 +331,101 @@
     </div>
   </section>
 
+  <section id="fichinhas">
+    <div class="wrap reveal">
+      <div class="kicker">Projeto em destaque · PWA offline-first</div>
+      <h2>Fichinhas</h2>
+
+      <div class="case-head">
+        <h3>Controle de fiado que substitui o caderno de uma revendedora</h3>
+        <span class="badge badge-live">em uso real · set/2026</span>
+      </div>
+
+      <p class="case-intro">Quem revende cosméticos por conta própria vende fiado e anota num caderno: uma página por cliente, valores descontados conforme o dinheiro chega, contas que não fecham. O Fichinhas é um PWA instalado na tela de início do celular que faz isso funcionar <strong>sem depender de rede</strong> — o sinal falha exatamente quando se está com a cliente na frente, e uma tela de erro ali é o que faz voltar para o papel. Produto próprio, do banco à tela, construído para uma revendedora real: as telas foram desenhadas contra um protótipo cronometrado com ela, e o app está instalado no iPhone dela, com dado real, desde setembro.</p>
+
+      <div class="tags">
+        <span class="tag">React 19</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span>
+        <span class="tag">Vite</span><span class="tag">PWA</span><span class="tag">Dexie (IndexedDB)</span>
+        <span class="tag">Supabase (Postgres + RLS)</span><span class="tag">Bun</span><span class="tag">Playwright</span>
+      </div>
+
+      <div class="metrics">
+        <div class="metric">
+          <div class="num">425</div>
+          <div class="label">testes: 395 de unidade, 25 contra o Postgres real, 5 no Chromium contra o build</div>
+        </div>
+        <div class="metric">
+          <div class="num">51</div>
+          <div class="label">decisões registradas, com a alternativa rejeitada e o porquê</div>
+        </div>
+        <div class="metric">
+          <div class="num">8</div>
+          <div class="label">falhas eliminatórias, cada uma com mecanismo e prova</div>
+        </div>
+        <div class="metric">
+          <div class="num">3 toques</div>
+          <div class="label">para registrar um recebimento — 14 s no protótipo cronometrado com a usuária</div>
+        </div>
+      </div>
+
+      <div class="decisions">
+        <div class="decision">
+          <h4>Offline-first: toda escrita nasce no aparelho, com id e tudo</h4>
+          <p>Cada operação gera um UUIDv7 no dispositivo, grava no IndexedDB e enfileira o envio <strong>na mesma transação</strong> — uma linha sem item na fila não existe. O mesmo id é a chave do <code>upsert</code> na nuvem, então reenviar é seguro por construção. O motor de sincronização roda ao lado, nunca é aguardado por tela nenhuma e não consulta <code>navigator.onLine</code>: ao sair do modo avião o iOS diz <code>true</code> e o <code>fetch</code> morre com <code>Load failed</code> — medido no aparelho antes de escrever o sistema. Provado no Chromium contra o build de produção: venda com a rede desligada que sobrevive a recarregar, reenvio que não duplica, dois aparelhos que convergem, base apagada que volta da nuvem.</p>
+        </div>
+
+        <div class="decision">
+          <h4>Dinheiro é <code>bigint</code> de centavos, e quem guarda é o compilador</h4>
+          <p><code>total * 0.9</code> não compila; <code>total / 3n</code> é divisão inteira com o resto visível. Na borda, onde <code>number</code> volta a ser legítimo, o lint reprova <code>parseFloat</code>, <code>Number</code>, <code>Math</code> e <code>toFixed</code> dentro do domínio — e há um teste que prova que o lint morde. Dividir em parcelas não é divisão, é repartição: R$ 100 em 3× vira <strong>33,40 | 33,30 | 33,30</strong>, múltiplos de 5 centavos porque o troco em dinheiro vivo anda de 5 em 5, com a primeira parcela carregando a diferença. Testes verificados por mutação: sem o piso ao múltiplo de 5, seis falham.</p>
+        </div>
+
+        <div class="decision">
+          <h4>Saldo derivado, nunca guardado; lançamento imutável</h4>
+          <p>A ficha é a lista dos lançamentos e só isso — não existe campo de saldo nem marca de "parcela paga". Correção é estorno, que também é lançamento. Isso compra o estorno de graça e elimina a classe de conflito que importaria entre dois aparelhos: registros que só nascem não têm o que conflitar. A prova roda 200 fichas × 60 operações aleatórias com semente e compara o saldo a duas somas independentes após cada operação — <strong>com contador de cobertura</strong>, porque a primeira rodada exercitou só 2 quitações em 12.000 operações e passava sem testar a regra. Sete mutações, sete acusadas.</p>
+        </div>
+
+        <div class="decision">
+          <h4>As invariantes valem no Postgres, e uma suíte tenta violá-las por fora</h4>
+          <p>Soma das parcelas igual ao total, um estorno por alvo, estorno que não se estorna, <code>UPDATE</code> que só passa se nada mudar — tudo constraint e gatilho, com o nome da constraint sendo o motivo em código que a fila recebe. Isolamento por conta é RLS com o dono carimbado pelo próprio banco (<code>default auth.uid()</code>), e <strong>as chaves estrangeiras são compostas com o dono</strong>, porque a verificação de FK ignora RLS: sem isso, uma conta apontaria para o cliente de outra sabendo o id. 17 testes por conexão direta, cada violação num <code>savepoint</code>, zero linhas deixadas; cinco mutações no esquema, todas acusadas.</p>
+        </div>
+      </div>
+
+      <div class="case-note">
+        <p><strong>A falha que nenhum teste automatizado detecta:</strong> lançar ser mais lento que a caneta. Por isso o primeiro código foi um protótipo descartável, cronometrado com a usuária antes de qualquer tela de produção — recebimento em 14 s e 3 toques, venda de dois itens em 48 s — e tudo o que entrou depois fica atrás de um toque, fora do caminho medido. Cada palavra das telas é registrada como hipótese até ser observada com ela: na primeira visita com o app real, ela registrou uma venda e um recebimento sozinha, na primeira tentativa, e voltou com oito pedidos que viraram a etapa seguinte.</p>
+      </div>
+
+      <div class="case-foot">
+        <a href="https://github.com/Elias-Costa/controle-estoque-gastos" class="case-link" target="_blank" rel="noopener">código no GitHub →</a>
+        <span class="note">MIT · sem link público: a base guarda dado financeiro de terceiros</span>
+      </div>
+    </div>
+  </section>
+
   <section id="projetos">
     <div class="wrap reveal">
       <div class="kicker">Portfólio</div>
       <h2>Outros projetos</h2>
+
+      <div class="card card-wide">
+        <div class="card-top">
+          <h3>invoice-microservices — emissão de notas fiscais em microsserviços</h3>
+          <span class="badge badge-neutral">em desenvolvimento</span>
+        </div>
+        <div class="tags">
+          <span class="tag">Java 21</span><span class="tag">Spring Boot 4</span><span class="tag">Apache Kafka</span>
+          <span class="tag">PostgreSQL</span><span class="tag">Angular</span><span class="tag">Testcontainers</span>
+          <span class="tag">Docker Compose</span>
+        </div>
+        <div class="card-wide-body">
+          <p>Dois serviços — estoque e faturamento — com um banco cada, consulta síncrona entre eles e toda mudança de estado por evento, com o fechamento da nota como Saga coordenada por outbox. Comecei pela fundação que os serviços compartilham, antes de qualquer regra de negócio, porque é onde mora o que nenhum deles pode errar: erros em Problem Details (RFC 9457), idempotência HTTP, outbox transacional e guarda contra evento reprocessado. Cada peça tem o contrato provado contra Postgres e Kafka reais via Testcontainers — 120 testes verdes — e cada decisão está registrada num log numerado ou em ADR. Os serviços e o frontend em Angular vêm em seguida.</p>
+          <ul class="card-points">
+            <li><strong>Outbox transacional provada contra Kafka real.</strong> O evento é gravado na transação do caso de uso e publicado por um poller com <code>FOR UPDATE SKIP LOCKED</code>: escrever fora de transação é recusado, rollback não deixa evento, a ordem por chave é preservada e um evento abandonado após N falhas não prende os demais.</li>
+            <li><strong>Idempotência HTTP por <code>Idempotency-Key</code>, escopada por usuário e rota.</strong> Mesmo corpo devolve a resposta guardada, comparada como JSON e não como bytes; corpo diferente é 422, chave em voo é 409, e erro do servidor libera a chave para o cliente tentar de novo.</li>
+            <li><strong>Consumidor que não reprocessa.</strong> Entrega duplicada é aplicada uma vez; se o efeito falha, a marca é desfeita junto e a reentrega é processada. Regra de negócio violada vai direto ao DLT, sem retry — o resto tenta cinco vezes com backoff.</li>
+          </ul>
+        </div>
+        <a href="https://github.com/Elias-Costa/invoice-microservices" class="card-link" target="_blank" rel="noopener">código no GitHub →</a>
+      </div>
 
       <div class="card card-wide">
         <div class="card-top">
@@ -364,37 +489,55 @@
       <h2>Habilidades técnicas</h2>
 
       <div class="skill-group">
-        <h4>Linguagens &amp; frameworks</h4>
+        <h4>Backend</h4>
         <div class="tags">
           <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Node.js</span>
           <span class="tag">TypeScript</span><span class="tag">Python</span><span class="tag">FastAPI</span>
-          <span class="tag">APIs REST</span>
+          <span class="tag">APIs REST</span><span class="tag">Apache Kafka</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Frontend</h4>
+        <div class="tags">
+          <span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Angular</span><span class="tag">Tailwind CSS</span>
+          <span class="tag">Vite</span><span class="tag">PWA (service worker, IndexedDB)</span><span class="tag">HTML/CSS</span>
         </div>
       </div>
       <div class="skill-group">
         <h4>Dados</h4>
         <div class="tags">
-          <span class="tag">PostgreSQL</span><span class="tag">MongoDB</span><span class="tag">SQL</span><span class="tag">SQLAlchemy</span>
+          <span class="tag">PostgreSQL</span><span class="tag">MongoDB</span><span class="tag">SQL</span>
+          <span class="tag">SQLAlchemy</span><span class="tag">Supabase</span>
         </div>
       </div>
       <div class="skill-group">
         <h4>Segurança &amp; arquitetura</h4>
         <div class="tags">
           <span class="tag">RBAC</span><span class="tag">autenticação JWT</span><span class="tag">Row Level Security</span>
-          <span class="tag">lógica transacional</span><span class="tag">arquitetura em camadas</span><span class="tag">design de sistemas</span>
+          <span class="tag">lógica transacional</span><span class="tag">arquitetura em camadas</span><span class="tag">monolito modular</span>
+          <span class="tag">microsserviços</span><span class="tag">idempotência</span><span class="tag">transactional outbox</span>
+          <span class="tag">offline-first</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Testes</h4>
+        <div class="tags">
+          <span class="tag">JUnit</span><span class="tag">Testcontainers</span><span class="tag">Vitest</span>
+          <span class="tag">Playwright</span><span class="tag">integração contra banco real</span>
         </div>
       </div>
       <div class="skill-group">
         <h4>Infraestrutura &amp; ferramentas</h4>
         <div class="tags">
-          <span class="tag">Docker</span><span class="tag">Gradle</span><span class="tag">Git</span><span class="tag">GitHub</span>
-          <span class="tag">Linux</span><span class="tag">AWS (EC2, S3, RDS)</span><span class="tag">Vercel</span>
+          <span class="tag">Docker</span><span class="tag">Docker Compose</span><span class="tag">Gradle</span><span class="tag">Maven</span>
+          <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Linux</span>
+          <span class="tag">AWS (EC2, S3, RDS)</span><span class="tag">Vercel</span>
         </div>
       </div>
       <div class="skill-group">
-        <h4>IA &amp; Machine Learning</h4>
+        <h4>Machine Learning</h4>
         <div class="tags">
-          <span class="tag">PyTorch</span><span class="tag">Scikit-learn</span><span class="tag">LLMs</span><span class="tag">Prompt Engineering</span>
+          <span class="tag">PyTorch</span><span class="tag">Scikit-learn</span>
         </div>
       </div>
     </div>
@@ -404,7 +547,7 @@
     <div class="wrap reveal">
       <div class="kicker">Contato</div>
       <h2>Vamos conversar</h2>
-      <p class="lead contato-lead">Disponível para início imediato em posições remotas de backend — Java/Spring Boot ou Node.js/TypeScript. Respondo rápido.</p>
+      <p class="lead contato-lead">Disponível para início imediato em posições remotas full stack ou backend — Java/Spring Boot, Node.js/TypeScript, React/Next.js. Respondo rápido.</p>
       <div class="contato-row">
         <a href="mailto:ecrprofessional@gmail.com" class="btn btn-solid">ecrprofessional@gmail.com</a>
         <a href="https://www.linkedin.com/in/elias-rodrigues-288450254/" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
