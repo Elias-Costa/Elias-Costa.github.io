@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Elias Rodrigues — Engenheiro de Software</title>
+  <desc id="desc">Backend, sistemas transacionais e aplicações offline. ECRX Caixa, Fichinhas e SiteHealth.</desc>
+  <rect width="1200" height="630" fill="#F2F4F1"/>
+  <rect width="12" height="630" fill="#157A4F"/>
+  <text x="84" y="114" font-family="'IBM Plex Mono', monospace" font-size="21" letter-spacing="4" fill="#656C79">ENGENHEIRO DE SOFTWARE</text>
+  <text x="80" y="246" font-family="'Space Grotesk', sans-serif" font-size="92" font-weight="600" letter-spacing="-2" fill="#14181F">Elias Rodrigues</text>
+  <g font-family="'IBM Plex Sans', sans-serif" font-size="32" fill="#4A5160">
+    <text x="84" y="316">Backend, sistemas transacionais</text>
+    <text x="84" y="358">e aplicações offline.</text>
+  </g>
+  <rect x="84" y="406" width="932" height="80" rx="6" fill="#FFFFFF" stroke="#DBDFD8"/>
+  <path d="M86 406V486" stroke="#157A4F" stroke-width="4"/>
+  <text x="114" y="455" font-family="'IBM Plex Mono', monospace" font-size="25" fill="#0D5C3B">ECRX Caixa · Fichinhas · SiteHealth</text>
+  <text x="84" y="558" font-family="'IBM Plex Mono', monospace" font-size="19" fill="#656C79">elias-costa.github.io</text>
+</svg>

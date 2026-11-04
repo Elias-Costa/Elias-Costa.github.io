@@ -4,7 +4,15 @@ Site pessoal
 
 **[elias-costa.github.io](https://elias-costa.github.io/)**
 
-Sobre mim, experiência, projetos e contato estão no site.
+Portfólio de Engenharia de Software: projetos, experiência, pesquisa e contato.
+
+## Projetos em destaque
+
+- **[ECRX Caixa](https://caixa.ecrxtecnologia.com.br/)** — sistema de caixa e vendas em Java e Spring, com PWA offline, sincronização e operação própria, incluindo backups cifrados no Amazon S3 e restauração ensaiada.
+- **Fichinhas** — controle de fiado e estoque para uma revendedora, com uso real, persistência local e sincronização.
+- **[SiteHealth](https://site-health-ten.vercel.app)** — SaaS de monitoramento técnico de sites, em pré-lançamento.
+
+Os detalhes de engenharia ficam em blocos expansíveis. As descrições distinguem recursos em uso, implantação e validações pendentes; contagens de testes e de decisões não são usadas como métricas da página.
 
 ## Stack
 
@@ -15,4 +23,5 @@ HTML, CSS e JavaScript puro. Sem framework, sem build step, sem dependências. �
 - `js/main.js` — revelação das seções por `IntersectionObserver`, respeitando `prefers-reduced-motion`
 - `favicon.svg` — favicon
 - `og-image.png` — imagem 1200×630 do card de compartilhamento (`og:image`)
+- `og-image.svg` — fonte vetorial do card; o PNG acompanha sua versão renderizada
 - `artigo-erbase-2025.pdf` — artigo publicado na ERBASE 2025, servido pelo site
