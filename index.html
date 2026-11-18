@@ -71,6 +71,11 @@
         "Java",
         "Spring Boot",
         "Spring Modulith",
+        "Spring Data JPA",
+        "Hibernate",
+        "Spring Security",
+        "Apache Kafka",
+        "Microsserviços",
         "Node.js",
         "TypeScript",
         "React",
@@ -130,7 +135,19 @@
         "TypeScript"
       ],
       "runtimePlatform": "Spring Boot",
-      "description": "Sistema de caixa e vendas multi-tenant para pequenos negócios. Monolito modular em Java, Spring Boot e Spring Modulith, com PWA React que opera offline, sincronização idempotente e PostgreSQL. Implantado em VPS, com CI, backups cifrados no Amazon S3 e restauração ensaiada.",
+      "description": "Sistema de caixa e vendas multi-tenant para pequenos negócios. Monolito modular em Java, Spring Boot e Spring Modulith, com PWA React que opera offline, sincronização idempotente e PostgreSQL. Integração Pix com dois provedores, em homologação. Implantado em VPS, com CI, backups cifrados no Amazon S3 e restauração ensaiada.",
+      "author": {
+        "@id": "https://elias-costa.github.io/#person"
+      }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://github.com/Elias-Costa/invoice-microservices#code",
+      "name": "invoice-microservices — emissão de notas fiscais em microsserviços",
+      "codeRepository": "https://github.com/Elias-Costa/invoice-microservices",
+      "programmingLanguage": "Java",
+      "runtimePlatform": "Spring Boot",
+      "description": "Emissão de notas fiscais em microsserviços, em desenvolvimento: Java 21, Spring Boot 4, Apache Kafka e PostgreSQL. O módulo comum tem outbox transacional, idempotência HTTP por Idempotency-Key, consumidor que não reprocessa e erros em Problem Details (RFC 9457), com testes contra PostgreSQL e Kafka reais.",
       "author": {
         "@id": "https://elias-costa.github.io/#person"
       }
@@ -249,10 +266,12 @@
         <p class="case-intro">Um PDV que reúne vendas, caixa, estoque, fiado e relatórios, com uma aplicação instalável que permite continuar o atendimento sem internet. Evoluiu de um núcleo transacional em Java para um produto implantado, com sincronização, controle de acesso e operação própria.</p>
         <p class="case-ownership"><strong>Minha atuação:</strong> produto, modelagem de domínio, backend, PWA, testes, implantação e manutenção.</p>
         <div class="tags" aria-label="Tecnologias do ECRX Caixa">
-          <span class="tag">Java 21</span><span class="tag">Spring Boot</span><span class="tag">Spring Modulith</span><span class="tag">PostgreSQL</span>
-          <span class="tag">React + TypeScript</span><span class="tag">PWA + IndexedDB</span><span class="tag">Testcontainers</span><span class="tag">Docker + GitHub Actions</span>
-          <span class="tag">Amazon S3</span>
+          <span class="tag">Java 21</span><span class="tag">Spring Boot 4</span><span class="tag">Spring Modulith</span><span class="tag">JPA/Hibernate</span>
+          <span class="tag">Spring Security</span><span class="tag">PostgreSQL + Flyway</span><span class="tag">Pix (Efí e Inter)</span>
+          <span class="tag">React + TypeScript</span><span class="tag">PWA + IndexedDB</span><span class="tag">JUnit + Testcontainers</span>
+          <span class="tag">Docker + GitHub Actions</span><span class="tag">Amazon S3</span>
         </div>
+        <p class="case-metrics"><span>mais de 850 testes automatizados</span> · <span>8 módulos</span> · <span>32 migrações Flyway</span></p>
         <ul class="highlights">
           <li><strong>Regras protegidas</strong><span>Domínio independente de framework, autorização por perfil e isolamento entre contas.</span></li>
           <li><strong>Atendimento offline</strong><span>Operações guardadas no aparelho e reenviadas sem duplicar seus efeitos.</span></li>
@@ -270,6 +289,10 @@
               <p>O PWA gera a identidade da operação no aparelho. No servidor, cada operação do lote grava seu resultado na mesma transação do efeito: se a resposta se perde, o reenvio devolve o resultado já registrado. As dependências ordenam a aplicação, e uma recusa tem um desfecho visível para conferência.</p>
             </div>
             <div class="decision">
+              <h4>Pix por uma interface, com dois provedores</h4>
+              <p>Cada forma de pagamento é uma estratégia própria: dinheiro com troco, cartão, fiado e Pix. O Pix integrado fala com o provedor por uma interface única, com uma implementação para a Efí e outra para o Inter, escolhida por Conta. O aviso de pagamento chega por um subdomínio em que o proxy exige o certificado do provedor (mTLS), e o servidor não toma o aviso como prova: usa o <code>txid</code> só para achar a parcela, reconsulta a cobrança no provedor e confirma uma vez só.</p>
+            </div>
+            <div class="decision">
               <h4>Implantar inclui saber restaurar</h4>
               <p>O CI verifica testes, build e avisos de segurança antes de publicar as imagens. A aplicação roda em uma VPS no Brasil, com backups do PostgreSQL de hora em hora, cifrados antes do envio ao Amazon S3, na região de São Paulo. A restauração foi ensaiada em banco vazio, localmente e na VPS, com conferência dos dados recuperados. O monitoramento acompanha a aplicação, as recusas e a cópia.</p>
             </div>
@@ -279,7 +302,7 @@
           <a href="https://caixa.ecrxtecnologia.com.br/" class="case-link" target="_blank" rel="noopener">ver o produto no ar →</a>
           <a href="https://github.com/Elias-Costa/ecrx-caixa" class="case-link" target="_blank" rel="noopener">código no GitHub →</a>
         </div>
-        <p class="case-status">Implantado e em preparação para o piloto. A integração Pix ainda aguarda homologação com o provedor.</p>
+        <p class="case-status">Implantado e em preparação para o piloto. O Pix integrado ainda aguarda homologação nos provedores; até lá, o Pix é lançado à mão.</p>
       </article>
 
       <article id="fichinhas" class="case reveal" aria-labelledby="titulo-fichinhas">
@@ -308,7 +331,7 @@
             </div>
             <div class="decision">
               <h4>Evoluir sem perder o que já está no aparelho</h4>
-              <p>As novas versões preservam fichas, estoque, fotos e operações pendentes. A cópia completa valida o arquivo e a conta antes da recuperação, com leitura de formatos anteriores. Gastos, cópia, textos editáveis do WhatsApp e lembretes foram publicados na atualização de novembro; a conferência dessa atualização no aparelho ainda está em andamento.</p>
+              <p>As novas versões preservam fichas, estoque, fotos e operações pendentes. A cópia completa valida o arquivo e a conta antes da recuperação, com leitura de formatos anteriores. Gastos, cópia, textos editáveis do WhatsApp e lembretes chegaram na atualização de novembro, já conferida no aparelho.</p>
             </div>
           </div>
         </details>
@@ -369,8 +392,8 @@
           <div class="dates">Estágio · Mai–Jul 2026</div>
         </div>
         <ul class="job-points">
-          <li>Identifiquei e corrigi problemas de N+1 em consultas, reduzindo o tempo de resposta de endpoints de 8s para 300ms, por refatoração de código e otimização de acesso ao banco.</li>
-          <li>Desenvolvi APIs e funcionalidades backend em Java e Spring Boot, com foco em lógica de negócio e consistência de dados.</li>
+          <li>Corrigi consultas N+1 com JOIN FETCH e projeções, reduzindo o tempo de resposta de endpoints de 8&nbsp;s para 300&nbsp;ms; a checagem passou a fazer parte da revisão de PRs do time.</li>
+          <li>Desenvolvi APIs REST em Java 21, Spring Boot e JPA/Hibernate, com foco em lógica de negócio e consistência de dados, em um time de 3 desenvolvedores com pull requests e code review.</li>
           <li>Implementei fluxos com múltiplos estados e validações em processos críticos, garantindo integridade com lógica transacional, além de controle de acesso por papéis (RBAC) no backend.</li>
         </ul>
       </div>
@@ -404,9 +427,26 @@
 
   <section id="outros-projetos" aria-labelledby="titulo-outros">
     <div class="wrap reveal">
-      <div class="kicker">Experiência institucional e pesquisa</div>
+      <div class="kicker">Em desenvolvimento, institucional e pesquisa</div>
       <h2 id="titulo-outros">Outros trabalhos</h2>
       <div class="cards">
+        <article class="card card-wide">
+          <div class="card-top">
+            <h3>invoice-microservices</h3>
+            <span class="badge badge-neutral">em desenvolvimento</span>
+          </div>
+          <div class="tags">
+            <span class="tag">Java 21</span><span class="tag">Spring Boot 4</span><span class="tag">Apache Kafka</span>
+            <span class="tag">PostgreSQL</span><span class="tag">Testcontainers</span><span class="tag">Docker Compose</span>
+          </div>
+          <p>Emissão de notas fiscais em microsserviços: estoque e faturamento, cada um com seu banco, com as mudanças de estado publicadas por evento no Kafka e o fechamento da nota desenhado como Saga. Comecei pela fundação que os serviços compartilham, onde fica o que nenhum deles pode errar: erros em Problem Details (RFC 9457), idempotência HTTP, outbox transacional e consumidor que não reprocessa. São 120 testes, 35 deles de integração contra PostgreSQL e Kafka reais via Testcontainers, e cada decisão está registrada. Os serviços e o frontend vêm em seguida.</p>
+          <ul class="card-points">
+            <li><strong>Outbox transacional provada contra Kafka real.</strong> O evento é gravado na transação do caso de uso e publicado por um poller com <code>FOR UPDATE SKIP LOCKED</code>: escrever fora de transação é recusado, rollback não deixa evento, a ordem por chave é preservada e um evento abandonado após N falhas não prende os demais.</li>
+            <li><strong>Idempotência HTTP por <code>Idempotency-Key</code>, por usuário e rota.</strong> O mesmo corpo devolve a resposta guardada, comparada como JSON e não como bytes; corpo diferente é 422, chave em voo é 409, e erro do servidor libera a chave para o cliente tentar de novo.</li>
+            <li><strong>Consumidor que não reprocessa.</strong> Entrega duplicada é aplicada uma vez; se o efeito falha, a marca é desfeita junto e a reentrega é processada. Regra de negócio violada vai direto ao dead letter topic, sem retry; o resto tenta cinco vezes com backoff.</li>
+          </ul>
+          <a href="https://github.com/Elias-Costa/invoice-microservices" class="card-link" target="_blank" rel="noopener">código no GitHub →</a>
+        </article>
         <article class="card">
           <div class="card-top">
             <h3>LGPDefender</h3>
@@ -461,14 +501,16 @@
       <div class="skill-group">
         <h3>Backend e dados</h3>
         <div class="tags">
-          <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Node.js</span><span class="tag">TypeScript</span>
-          <span class="tag">Python</span><span class="tag">APIs REST</span><span class="tag">PostgreSQL</span><span class="tag">SQL</span><span class="tag">Supabase</span>
+          <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Spring Data JPA / Hibernate</span><span class="tag">Spring Security</span>
+          <span class="tag">Node.js</span><span class="tag">TypeScript</span><span class="tag">Python</span><span class="tag">APIs REST</span>
+          <span class="tag">PostgreSQL</span><span class="tag">SQL</span><span class="tag">Flyway</span><span class="tag">Supabase</span>
         </div>
       </div>
       <div class="skill-group">
         <h3>Arquitetura e confiabilidade</h3>
         <div class="tags">
           <span class="tag">modelagem de domínio</span><span class="tag">monolito modular</span><span class="tag">Spring Modulith</span>
+          <span class="tag">microsserviços</span><span class="tag">Apache Kafka</span><span class="tag">outbox transacional</span>
           <span class="tag">consistência transacional</span><span class="tag">idempotência</span><span class="tag">offline-first</span>
           <span class="tag">RBAC</span><span class="tag">RLS</span><span class="tag">autenticação JWT</span>
         </div>
@@ -483,8 +525,8 @@
       <div class="skill-group">
         <h3>Testes e operação</h3>
         <div class="tags">
-          <span class="tag">JUnit</span><span class="tag">Testcontainers</span><span class="tag">Bun Test</span><span class="tag">Vitest</span>
-          <span class="tag">Playwright</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">Git</span>
+          <span class="tag">JUnit</span><span class="tag">Mockito</span><span class="tag">Testcontainers</span><span class="tag">Bun Test</span><span class="tag">Vitest</span>
+          <span class="tag">Playwright</span><span class="tag">Docker</span><span class="tag">Maven</span><span class="tag">GitHub Actions</span><span class="tag">Git</span>
           <span class="tag">Linux</span><span class="tag">AWS (EC2, RDS)</span><span class="tag">Amazon S3 (backups)</span><span class="tag">Vercel</span><span class="tag">backup e restauração</span>
         </div>
       </div>

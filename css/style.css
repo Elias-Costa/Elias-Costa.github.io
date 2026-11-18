@@ -173,6 +173,9 @@ section h2{font-size:26px;margin-bottom:28px;}
 .case-intro strong{color:var(--ink);font-weight:600;}
 .case-ownership{color:var(--ink-muted);font-size:14px;margin-bottom:20px;max-width:70ch;}
 .case-ownership strong{color:var(--ink);font-weight:500;}
+.case-metrics{font-family:var(--font-mono);font-size:12.5px;color:var(--ink-muted);margin-top:14px;}
+/* a linha só quebra entre os números, nunca entre o número e o que ele conta */
+.case-metrics span{white-space:nowrap;}
 
 .highlights{
   display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
@@ -238,6 +241,19 @@ section h2{font-size:26px;margin-bottom:28px;}
    container, senão cada link tentaria se empurrar para baixo isoladamente */
 .card-links{display:flex;flex-wrap:wrap;gap:16px;margin-top:auto;padding-top:6px;}
 .card-links .card-link{margin-top:0;padding-top:0;}
+/* card que ocupa a linha inteira da grade: projeto com mais texto que os vizinhos */
+.card-wide{grid-column:1 / -1;}
+.card-points{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;}
+.card-points li{
+  font-size:14px;line-height:1.55;color:var(--ink-muted);
+  border-left:2px solid var(--line);padding-left:14px;
+}
+.card-points strong{color:var(--ink);font-weight:600;}
+.card code{
+  font-family:var(--font-mono);font-size:12.5px;
+  background:var(--paper);border:1px solid var(--line);
+  padding:1px 5px;border-radius:4px;color:var(--ink);
+}
 a.case-link{
   font-family:var(--font-mono);font-size:13.5px;color:var(--ink);
   text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:2px;
