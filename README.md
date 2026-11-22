@@ -12,7 +12,7 @@ Portfólio de Engenharia de Software: projetos, experiência, pesquisa e contato
 - **Fichinhas** — controle de fiado e estoque para uma revendedora, com uso real, persistência local e sincronização.
 - **[SiteHealth](https://site-health-ten.vercel.app)** — SaaS de monitoramento técnico de sites, em pré-lançamento.
 
-Os detalhes de engenharia ficam em blocos expansíveis. As descrições distinguem recursos em uso, implantação e validações pendentes; contagens de testes e de decisões não são usadas como métricas da página.
+Os detalhes de engenharia ficam em blocos expansíveis. As descrições distinguem recursos em uso, implantação e validações pendentes, e as contagens de testes vêm da execução das suítes de cada projeto.
 
 ## Stack
 
